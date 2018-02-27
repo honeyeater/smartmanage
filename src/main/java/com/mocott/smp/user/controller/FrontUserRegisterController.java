@@ -524,7 +524,6 @@ public class FrontUserRegisterController extends BaseController {
                 if ("t_s_feedreply".equals(typecode)) {  //附件信息
 
                 }
-
             }
         } catch (Exception e) {
             e.printStackTrace();
