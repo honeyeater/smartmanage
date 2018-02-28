@@ -30,7 +30,17 @@ public class OrderDrawInfoServiceImpl extends CommonServiceImpl implements Order
  		this.doAddBus(entity);
  		return t;
  	}
- 	
+
+	public void deleteByUserName(String userName) throws Exception{
+		String query = "delete from order_draw_info where username='"+userName+"'";
+		this.executeSql(query);
+	}
+
+	public void updateByUserName(String userName) throws Exception{
+		String query = "update order_draw_info set username='RS" + userName + "'where username='"+userName+"'";
+		this.executeSql(query);
+	}
+
  	public void saveOrUpdate(OrderDrawInfoEntity entity) throws Exception{
  		super.saveOrUpdate(entity);
  		//执行更新操作增强业务

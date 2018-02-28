@@ -11,5 +11,6 @@ public interface OrderDrawInfoServiceI extends CommonService{
  	public Serializable save(OrderDrawInfoEntity entity) throws Exception;
  	
  	public void saveOrUpdate(OrderDrawInfoEntity entity) throws Exception;
- 	
+
+	public void updateByUserName(String userName) throws Exception;
 }

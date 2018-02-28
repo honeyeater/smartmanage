@@ -30,8 +30,14 @@ public class LogTradeInfoServiceImpl extends CommonServiceImpl implements LogTra
  		this.doAddBus(entity);
  		return t;
  	}
- 	
- 	public void saveOrUpdate(LogTradeInfoEntity entity) throws Exception{
+
+	public void updateByUserName(String userName) throws Exception {
+		String query = "update log_trade_info set username='RS" + userName + "'where username='"+userName+"'";
+		this.executeSql(query);
+	}
+
+
+	public void saveOrUpdate(LogTradeInfoEntity entity) throws Exception{
  		super.saveOrUpdate(entity);
  		//执行更新操作增强业务
  		this.doUpdateBus(entity);

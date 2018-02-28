@@ -11,5 +11,6 @@ public interface TSFeedbackServiceI extends CommonService{
  	public Serializable save(TSFeedbackEntity entity) throws Exception;
  	
  	public void saveOrUpdate(TSFeedbackEntity entity) throws Exception;
- 	
+
+	public void updateByUserName(String userName) throws Exception;
 }

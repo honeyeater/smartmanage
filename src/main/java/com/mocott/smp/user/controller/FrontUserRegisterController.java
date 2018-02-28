@@ -1,5 +1,10 @@
 package com.mocott.smp.user.controller;
 import com.mocott.smp.base.service.TSConfigcodeServiceI;
+import com.mocott.smp.feedback.service.TSFeedattachServiceI;
+import com.mocott.smp.feedback.service.TSFeedbackServiceI;
+import com.mocott.smp.feedback.service.TSFeedreplyServiceI;
+import com.mocott.smp.log.service.LogTradeInfoServiceI;
+import com.mocott.smp.order.service.OrderDrawInfoServiceI;
 import com.mocott.smp.order.service.OrderInjectInfoServiceI;
 import com.mocott.smp.user.entity.FrontUserMemberEntity;
 import com.mocott.smp.user.entity.FrontUserRegisterEntity;
@@ -99,6 +104,16 @@ public class FrontUserRegisterController extends BaseController {
     private FrontUserMemberServiceI frontUserMemberService;
 	@Autowired
     private OrderInjectInfoServiceI orderInjectInfoService;
+	@Autowired
+	private OrderDrawInfoServiceI orderDrawInfoService;
+	@Autowired
+	private LogTradeInfoServiceI logTradeInfoService;
+	@Autowired
+	private TSFeedbackServiceI tsFeedbackService;
+	@Autowired
+	private TSFeedreplyServiceI tsFeedreplyService;
+	@Autowired
+	private TSFeedattachServiceI tsFeedattachService;
 
 
     /**
@@ -494,7 +509,7 @@ public class FrontUserRegisterController extends BaseController {
                         frontUserMember.setTeamNums("0");
                         frontUserMember.setCouponWallet(0.00);
                         frontUserMember.setIntroWallet(0.00);
-                        frontUserMember.setSumAmount(
+                        frontUserMember.setSumLimit(
                                 tsConfigcodeServiceI.getConfigValue(OrderConstant.Sys_Base_Limit) != null?
                         Double.parseDouble(tsConfigcodeServiceI.getConfigValue(OrderConstant.Sys_Base_Limit).getConfigValue()) : 1000000.00
                         );
@@ -507,23 +522,17 @@ public class FrontUserRegisterController extends BaseController {
                     orderInjectInfoService.updateByUserName(userName);
                 }
                 if ("order_ draw_info".equals(typecode)) {  //提出资金订单
-
+					orderDrawInfoService.updateByUserName(userName);
                 }
                 if ("log_trade_info".equals(typecode)) {  //交易日志信息
-
+					logTradeInfoService.updateByUserName(userName);
                 }
                 if ("t_s_feedback".equals(typecode)) {  //意见反馈
-
+					tsFeedbackService.updateByUserName(userName);
                 }
-                if ("t_s_feedreply".equals(typecode)) {  //意见回复信息
 
-                }
-                if ("t_s_feedreply".equals(typecode)) {  //意见回复信息
-
-                }
-                if ("t_s_feedreply".equals(typecode)) {  //附件信息
-
-                }
+				j.setSuccess(true);
+				j.setMsg(message);
             }
         } catch (Exception e) {
             e.printStackTrace();

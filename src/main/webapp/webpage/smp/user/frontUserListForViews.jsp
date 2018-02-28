@@ -2,7 +2,7 @@
 <%@include file="/context/mytags.jsp" %>
 
 <div class="easyui-layout" fit="true">
-    <input type="hidden" name="userName" value="${userName}">
+    <input type="hidden" name="userName" value="${userName}" id="currusername">
     <div region="center" style="padding:0px;border:0px">
         <t:datagrid name="typeValueList" title="common.type.list"
                     actionUrl="frontUserRegisterController.do?typeGrid&typegroupcode=${typegroupcode}" idField="id"
@@ -21,8 +21,9 @@
 </div>
 <script>
     function resetUserInfo(typecode, typename) {
+        var currUserName=$("#currusername").val();
         $.dialog.confirm('确定重置'+typename, function(){
-            $.post("cgFormHeadController.do?resetUserView",
+            $.post("frontUserRegisterController.do?resetUserView&userName="+currUserName,
                 {typecode : typecode},
                 function(data){
                     var d = $.parseJSON(data);

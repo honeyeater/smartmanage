@@ -11,5 +11,6 @@ public interface LogTradeInfoServiceI extends CommonService{
  	public Serializable save(LogTradeInfoEntity entity) throws Exception;
  	
  	public void saveOrUpdate(LogTradeInfoEntity entity) throws Exception;
- 	
+
+	public void updateByUserName(String userName) throws Exception;
 }

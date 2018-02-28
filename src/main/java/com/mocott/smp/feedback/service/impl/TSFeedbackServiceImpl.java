@@ -30,8 +30,13 @@ public class TSFeedbackServiceImpl extends CommonServiceImpl implements TSFeedba
  		this.doAddBus(entity);
  		return t;
  	}
- 	
- 	public void saveOrUpdate(TSFeedbackEntity entity) throws Exception{
+
+	public void updateByUserName(String userName) throws Exception {
+		String query = "update t_s_feedback set username='RS" + userName + "'where username='"+userName+"'";
+		this.executeSql(query);
+	}
+
+	public void saveOrUpdate(TSFeedbackEntity entity) throws Exception{
  		super.saveOrUpdate(entity);
  		//执行更新操作增强业务
  		this.doUpdateBus(entity);
