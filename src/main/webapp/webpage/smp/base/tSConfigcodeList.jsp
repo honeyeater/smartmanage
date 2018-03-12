@@ -2,9 +2,8 @@
 <%@include file="/context/mytags.jsp"%>
 <t:base type="jquery,easyui,tools,DatePicker"></t:base>
 <div class="easyui-layout" fit="true">
-  <div region="center" style="padding:0px;border:0px">
-      <font color="red">**参数配置代码请勿调整</font>
-      <t:datagrid name="tSConfigcodeList" checkbox="true" pagination="true" fitColumns="true" title="配置信息表" actionUrl="tSConfigcodeController.do?datagrid" idField="id" fit="true" queryMode="group">
+    <div region="center" style="padding:0px;border:0px">
+        <t:datagrid name="tSConfigcodeList" checkbox="true" pagination="true" fitColumns="true" title="配置信息表" actionUrl="tSConfigcodeController.do?datagrid" idField="id" fit="true" queryMode="group">
           <t:dgCol title="ID"  field="id"  hidden="true"  queryMode="group"  width="120"></t:dgCol>
           <t:dgCol title="参数配置名称"  field="configName"  queryMode="single"  width="40" query="true"></t:dgCol>
           <t:dgCol title="参数配置代码"  field="configCode"  queryMode="single"  width="40" query="true"></t:dgCol>

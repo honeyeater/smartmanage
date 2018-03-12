@@ -36,4 +36,9 @@ public class OrderConstant {
 
 
     public static String Sum_Limit = "SumLimit"; //钱包限额
+
+    public static Double DefaultPirce = 120.00; //缺失价格
+    public static String FeeRate = "FeeRate";
+    public static String ActcodeLow = "ActLowLevel"; //低级别激活码
+    public static String ActcodeMed = "ActMedLevel"; //中级别激活码
 }
