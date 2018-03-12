@@ -225,7 +225,6 @@ public class FrontUserRegisterController extends BaseController {
 	/**
 	 * 添加注册用户信息表
 	 * 
-	 * @param ids
 	 * @return
 	 */
 	@RequestMapping(params = "doAdd")
@@ -510,8 +509,8 @@ public class FrontUserRegisterController extends BaseController {
                         frontUserMember.setCouponWallet(0.00);
                         frontUserMember.setIntroWallet(0.00);
                         frontUserMember.setSumLimit(
-                                tsConfigcodeServiceI.getConfigValue(OrderConstant.Sys_Base_Limit) != null?
-                        Double.parseDouble(tsConfigcodeServiceI.getConfigValue(OrderConstant.Sys_Base_Limit).getConfigValue()) : 1000000.00
+                                tsConfigcodeServiceI.getConfigValue(OrderConstant.Sum_Limit) != null?
+                        Double.parseDouble(tsConfigcodeServiceI.getConfigValue(OrderConstant.Sum_Limit).getConfigValue()) : 1000000.00
                         );
                         frontUserMember.setUseLimit(0.00);
                         frontUserMember.setVfield1("");
