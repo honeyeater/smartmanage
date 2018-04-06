@@ -11,8 +11,6 @@
 			<input id="id" name="id" type="hidden" value="${usdtBankPage.id }">
 			<input id="inserttimeforhis" name="inserttimeforhis" type="hidden" value="${usdtBankPage.inserttimeforhis }">
 			<input id="operatetimeforhis" name="operatetimeforhis" type="hidden" value="${usdtBankPage.operatetimeforhis }">
-			<input id="vfield1" name="vfield1" type="hidden" value="${usdtBankPage.vfield1 }">
-			<input id="vfield2" name="vfield2" type="hidden" value="${usdtBankPage.vfield2 }">
 			<input id="vfield3" name="vfield3" type="hidden" value="${usdtBankPage.vfield3 }">
 			<input id="vfield4" name="vfield4" type="hidden" value="${usdtBankPage.vfield4 }">
 			<input id="vfield5" name="vfield5" type="hidden" value="${usdtBankPage.vfield5 }">
@@ -41,6 +39,16 @@
                 <input id="accountname" name="accountname" type="text" style="width: 150px" class="inputxt"  datatype="*"  ignore="checked" />
 		      <span class="Validform_checktip"></span>
 		    </div>
+            <div class="form">
+                <label class="Validform_label">支付宝账号:</label>
+                <input id="vfield1" name="vfield1" type="text" style="width: 150px" class="inputxt"  datatype="n"  ignore="checked" />
+                <span class="Validform_checktip"></span>
+            </div>
+            <div class="form">
+                <label class="Validform_label">支付宝名称:</label>
+                <input id="vfield2" name="vfield2" type="text" style="width: 150px" class="inputxt"  datatype="*"  ignore="checked" />
+                <span class="Validform_checktip"></span>
+            </div>
 			<div class="form">
 		      <label class="Validform_label">状态:</label>
                 <t:dictSelect field="status" type="list"  datatype="*"  typeGroupCode="yOn"   defaultVal="${usdtBankPage.status}" hasLabel="false"  title="状态"></t:dictSelect>

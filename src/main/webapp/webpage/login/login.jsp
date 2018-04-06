@@ -51,9 +51,9 @@
                     <div class="center">
                         <h1 id="id-text2" class="grey">
                             <i class="ace-icon fa fa-leaf blue"></i>
-                            智能理财平台管理系统
+                            JR智能理财管理系统
                         </h1>
-                        <h4 class="blue" id="id-company-text">www.smartpay.org</h4>
+                        <h4 class="blue" id="id-company-text">jr-ifm</h4>
                     </div>
                     <div class="space-6"></div>
                     <div class="position-relative">
@@ -122,7 +122,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="center"><h5 class="blue" id="id-company-text">&copy; SMP版权所有 V_1.2.1</h5></div>
+                        <div class="center"><h5 class="blue" id="id-company-text">&copy; JR版权所有 V_1.0.0</h5></div>
 
                         <div class="navbar-fixed-top align-right" style="display: none;">
                             <br />

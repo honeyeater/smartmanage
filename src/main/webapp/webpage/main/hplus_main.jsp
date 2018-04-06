@@ -16,8 +16,8 @@
 
     <title><t:mutiLang langKey="jeect.platform"/></title>
 
-    <meta name="keywords" content="金润智能理财平台">
-    <meta name="description" content="金润智能理财平台">
+    <meta name="keywords" content="智能理财平台">
+    <meta name="description" content="智能理财平台">
 
     <link rel="shortcut icon" href="images/favicon.ico">
     <link href="plug-in-ui/hplus/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
@@ -87,7 +87,7 @@
                 <div class="navbar-header" style="height: 60px;"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
                     <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
                         <div class="form-group">
-                            <input type="text" placeholder="欢迎使用SMP交易平台" class="form-control" name="top-search" id="top-search">
+                            <input type="text" placeholder="欢迎使用JR交易平台" class="form-control" name="top-search" id="top-search">
                         </div>
                     </form>
                 </div>
@@ -230,7 +230,7 @@
         <!-- update-end--Author:zhoujf  Date:20170710 for：TASK #2003 【UI改进】列表加载慢的时候会出现白板  -->
         <!-- update-begin--Author:xuelin  Date:20170611 for：TASK #2100 【列表样式美化】【样式专题】Jeecg平台任务 --1下面这条线，变明朗点--------------------  -->
         <div class="footer" style="border-top:none;">
-            <div class="pull-right">&copy; <t:mutiLang langKey="system.version.number"/> <a href="#" target="_blank">smartpay</a>
+            <div class="pull-right">&copy; <t:mutiLang langKey="system.version.number"/> <a href="#" target="_blank">JR</a>
             </div>
         </div>        
 		<!-- update-end--Author:xuelin  Date:20170611 for：TASK #2100 【列表样式美化】【样式专题】Jeecg平台任务 --1下面这条线，变明朗点----------------------  -->

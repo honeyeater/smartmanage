@@ -167,7 +167,7 @@ public class DynamicTask {
 		List<String> ipList = IpUtil.getLocalIPList();
 		TSTimeTaskEntity timTask = new TSTimeTaskEntity();
 		timTask.setIsEffect("1");
-		timTask.setIsStart("1");
+		timTask.setIsStart("23");
 		List<TSTimeTaskEntity> tasks = (List<TSTimeTaskEntity>)timeTaskService.findByExample(TSTimeTaskEntity.class.getName(), timTask);	
 		logger.info(" register time task class num is ["+tasks.size()+"] ");
 		if(tasks.size() > 0){
